@@ -16,14 +16,6 @@ import javafx.scene.layout.GridPane;
 
 import static editor.config.Colors.*;
 
-/**
- * TODO: TEXT
- * TODO: CROP
- * TODO: COLOR PICKER TOOL
- * TODO: GRADIENT
- * TODO: MOVE
-*/
-
 public class GraphicEditorController {
     @FXML
     private AnchorPane rootPane;
