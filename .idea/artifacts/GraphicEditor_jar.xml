@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GraphicEditor:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GraphicEditor_jar</output-path>
+    <root id="archive" name="GraphicEditor.jar">
+      <element id="module-output" name="GraphicEditor" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/var/lib/javafx-sdk-15/lib/javafx.graphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
