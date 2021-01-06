@@ -48,6 +48,12 @@ public class GraphicEditorController {
     private Button eraserBtn;
 
     @FXML
+    private Button addTextBtn;
+
+    @FXML
+    private Button cropImageBtn;
+
+    @FXML
     private TextField brushWidthInput;
 
     @FXML
@@ -84,7 +90,7 @@ public class GraphicEditorController {
         final ContainersResizeListener containersResizeListener = new ContainersResizeListener(rootPane, mainPane,
                 splitPane, splitLeftPane, splitRightPane, toolsPane, canvas);
         final SetButtonsImage setButtonsImage = new SetButtonsImage(brushBtn, eraserBtn, canvasFillBtn,
-                canvasClearBtn, openImageBtn, exportImageBtn);
+                canvasClearBtn, addTextBtn, cropImageBtn, openImageBtn, exportImageBtn);
         final BrushDrawing brushDrawing = new BrushDrawing(canvas, brushBtn, eraserBtn, brushColorPicker, brushWidthInput, saveBrushWidthBtn);
         final CanvasDrawing canvasDrawing = new CanvasDrawing(canvas, canvasFillBtn, canvasClearBtn, canvasColorPicker);
         final PictureDrawing pictureDrawing = new PictureDrawing(pictureSelect, drawPictureBtn);

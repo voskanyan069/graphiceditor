@@ -46,8 +46,10 @@
                         <ChoiceBox fx:id="pictureSelect" prefWidth="150.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                         <Button fx:id="drawPictureBtn" mnemonicParsing="false" styleClass="toolbox_buttons" text="Draw" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                         <Button fx:id="brushBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" />
-                        <Button fx:id="openImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="exportImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="openImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.rowIndex="4" />
+                        <Button fx:id="exportImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="addTextBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="cropImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                     </GridPane>
                 </AnchorPane>
                 <AnchorPane fx:id="splitRightPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
