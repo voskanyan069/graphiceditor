@@ -1,9 +1,11 @@
 package editor.controllers;
 
 import editor.canvas.AddText;
+import editor.config.Colors;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
@@ -19,9 +21,6 @@ public class AddTextAlertController {
     private TextField fontSizeInput;
 
     @FXML
-    private Button addTextToCanvasBtn;
-
-    @FXML
     private Button selectFontBtn;
 
     @FXML
@@ -29,6 +28,12 @@ public class AddTextAlertController {
 
     @FXML
     private TextField yPositionInput;
+
+    @FXML
+    private ColorPicker textColorPicker;
+
+    @FXML
+    private Button addTextToCanvasBtn;
 
     private double x;
     private double y;
@@ -40,9 +45,11 @@ public class AddTextAlertController {
     void initialize() {
         addText();
         changeFontFamily();
+        changeTextColor();
     }
 
     private void addText() {
+        textColorPicker.setValue(Colors.textColor);
         addTextToCanvasBtn.setOnAction(actionEvent -> {
             fontSize = (int) setNumber(fontSizeInput);
             x = setNumber(xPositionInput);
@@ -54,6 +61,10 @@ public class AddTextAlertController {
             AddText.addText(addTextArea.getText(), x, y, "file:" + fontFamilyPath, fontSize);
             ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         });
+    }
+
+    private void changeTextColor() {
+        textColorPicker.setOnAction(actionEvent -> Colors.textColor = textColorPicker.getValue());
     }
 
     private void changeFontFamily() {

@@ -23,7 +23,7 @@ public class AddText {
     }
 
     public static void addText(String text, double x, double y, String fontFamilyPath, int fontSize) {
-        graphicsContext.setFill(Colors.brushColor);
+        graphicsContext.setFill(Colors.textColor);
         graphicsContext.fillText(text, x, y);
         graphicsContext.setFont(Font.loadFont(fontFamilyPath, fontSize));
     }
