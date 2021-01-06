@@ -1,9 +1,6 @@
 package editor.controllers;
 
-import editor.canvas.CanvasIO;
-import editor.canvas.BrushDrawing;
-import editor.canvas.CanvasDrawing;
-import editor.canvas.PictureDrawing;
+import editor.canvas.*;
 import editor.config.ContainersResizeListener;
 import editor.ui.SetButtonsImage;
 import javafx.fxml.FXML;
@@ -93,6 +90,7 @@ public class GraphicEditorController {
                 canvasClearBtn, addTextBtn, cropImageBtn, openImageBtn, exportImageBtn);
         final BrushDrawing brushDrawing = new BrushDrawing(canvas, brushBtn, eraserBtn, brushColorPicker, brushWidthInput, saveBrushWidthBtn);
         final CanvasDrawing canvasDrawing = new CanvasDrawing(canvas, canvasFillBtn, canvasClearBtn, canvasColorPicker);
+        final AddText addText = new AddText(canvas, addTextBtn);
         final PictureDrawing pictureDrawing = new PictureDrawing(pictureSelect, drawPictureBtn);
         final CanvasIO canvasIO = new CanvasIO(canvas, openImageBtn, exportImageBtn);
 
@@ -101,6 +99,7 @@ public class GraphicEditorController {
         brushDrawing.updateBrush(brushColor);
         brushDrawing.start();
         canvasDrawing.start();
+        addText.openDialog();
         pictureDrawing.start();
         canvasIO.start();
     }

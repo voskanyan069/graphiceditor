@@ -64,7 +64,7 @@ public class PictureDrawing {
 
             DrawPictureAlertController.initGridPaneElements(params);
             ChangeStage.changeStage(GraphicEditorController.class, "../ui/draw_picture_alert.fxml",
-                    selectedPicture, new int[]{600, 400}, new int[]{600, 400}, false);
+                    "Draw " + selectedPicture, new int[]{600, 400}, new int[]{600, 400}, false);
         });
     }
 
