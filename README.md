@@ -3,5 +3,5 @@
 - Add text
 - Crop image
 - Screen color picker tool
-- Gradient fill of pictores
-- Move drawed pictures in canvas
+- Gradient fill of pictures
+- Move drawn pictures in canvas
