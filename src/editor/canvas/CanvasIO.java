@@ -1,4 +1,4 @@
-package editor.draw;
+package editor.canvas;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Node;

@@ -1,6 +1,6 @@
 package editor.controllers;
 
-import editor.draw.PictureDrawing;
+import editor.canvas.PictureDrawing;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;

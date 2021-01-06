@@ -1,9 +1,9 @@
 package editor.controllers;
 
-import editor.draw.CanvasIO;
-import editor.draw.BrushDrawing;
-import editor.draw.CanvasDrawing;
-import editor.draw.PictureDrawing;
+import editor.canvas.CanvasIO;
+import editor.canvas.BrushDrawing;
+import editor.canvas.CanvasDrawing;
+import editor.canvas.PictureDrawing;
 import editor.config.ContainersResizeListener;
 import editor.ui.SetButtonsImage;
 import javafx.fxml.FXML;

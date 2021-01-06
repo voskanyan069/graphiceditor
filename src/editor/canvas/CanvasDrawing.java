@@ -1,4 +1,4 @@
-package editor.draw;
+package editor.canvas;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;

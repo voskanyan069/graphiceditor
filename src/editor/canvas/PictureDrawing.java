@@ -1,4 +1,4 @@
-package editor.draw;
+package editor.canvas;
 
 import editor.config.ChangeStage;
 import editor.controllers.DrawPictureAlertController;
