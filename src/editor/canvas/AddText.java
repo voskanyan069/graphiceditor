@@ -1,12 +1,10 @@
 package editor.canvas;
 
-
 import editor.config.ChangeStage;
 import editor.config.Colors;
 import editor.controllers.GraphicEditorController;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 import static editor.controllers.GraphicEditorController.graphicsContext;
