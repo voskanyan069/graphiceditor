@@ -1,6 +1,6 @@
 # Graphic Editor
 ## TODO
-- Add text
+- ~~Add text~~
 - Crop image
 - Screen color picker tool
 - Gradient fill of pictures
