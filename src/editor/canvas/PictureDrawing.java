@@ -1,5 +1,6 @@
 package editor.canvas;
 
+import editor.config.BrushWidth;
 import editor.config.ChangeStage;
 import editor.controllers.DrawPictureAlertController;
 import editor.controllers.GraphicEditorController;
@@ -43,6 +44,7 @@ public class PictureDrawing {
     private void alertForPictureInformation() {
         drawPictureBtn.setOnAction(actionEvent -> {
             graphicsContext.setFill(brushColor);
+            graphicsContext.setStroke(brushColor);
             selectedPicture = pictureSelect.getValue();
             String[] params;
             switch (selectedPicture) {
@@ -68,22 +70,39 @@ public class PictureDrawing {
         });
     }
 
-    public void drawSelectedPicture(List<String> valuesList) {
+    public void drawSelectedPicture(List<String> valuesList, boolean filled) {
         double[] values;
+        graphicsContext.setFill(brushColor);
+        graphicsContext.setStroke(brushColor);
+        graphicsContext.setLineWidth(BrushWidth.strokeWidth);
         switch (selectedPicture) {
             case "Rect":
                 values = initPictureDoubleValues(valuesList);
-                graphicsContext.fillRect(values[0], values[1],
-                        values[2], values[3]);
+                if (filled) {
+                    graphicsContext.fillRect(values[0], values[1],
+                            values[2], values[3]);
+                } else {
+                    graphicsContext.strokeRect(values[0], values[1],
+                            values[2], values[3]);
+                }
                 break;
             case "Triangle":
                 values = initPictureDoubleValues(valuesList);
-                graphicsContext.fillPolygon(new double[]{values[0], values[1], values[2]},
-                        new double[]{values[3], values[4], values[5]}, 3);
+                if (filled) {
+                    graphicsContext.fillPolygon(new double[]{values[0], values[1], values[2]},
+                            new double[]{values[3], values[4], values[5]}, 3);
+                } else {
+                    graphicsContext.strokePolygon(new double[]{values[0], values[1], values[2]},
+                            new double[]{values[3], values[4], values[5]}, 3);
+                }
                 break;
             case "Round":
                 values = initPictureDoubleValues(valuesList);
-                graphicsContext.fillOval(values[0], values[1], values[2], values[2]);
+                if (filled) {
+                    graphicsContext.fillOval(values[0], values[1], values[2], values[2]);
+                } else {
+                    graphicsContext.strokeOval(values[0], values[1], values[2], values[2]);
+                }
                 break;
             case "Arc":
                 String type = valuesList.get(valuesList.size() - 1);
@@ -100,18 +119,33 @@ public class PictureDrawing {
                     default:
                         arcType = ArcType.OPEN;
                 }
-                graphicsContext.fillArc(values[0], values[1], values[2],
-                        values[3], values[4], values[5], arcType);
+                if (filled) {
+                    graphicsContext.fillArc(values[0], values[1], values[2],
+                            values[3], values[4], values[5], arcType);
+                } else {
+                    graphicsContext.strokeArc(values[0], values[1], values[2],
+                            values[3], values[4], values[5], arcType);
+                }
                 break;
             case "Oval":
                 values = initPictureDoubleValues(valuesList);
-                graphicsContext.fillOval(values[0], values[1],
-                        values[2], values[3]);
+                if (filled) {
+                    graphicsContext.fillOval(values[0], values[1],
+                            values[2], values[3]);
+                } else {
+                    graphicsContext.strokeOval(values[0], values[1],
+                            values[2], values[3]);
+                }
                 break;
             case "Round rect":
                 values = initPictureDoubleValues(valuesList);
-                graphicsContext.fillRoundRect(values[0], values[1], values[2],
-                        values[3], values[4], values[5]);
+                if (filled) {
+                    graphicsContext.fillRoundRect(values[0], values[1], values[2],
+                            values[3], values[4], values[5]);
+                } else {
+                    graphicsContext.strokeRoundRect(values[0], values[1], values[2],
+                            values[3], values[4], values[5]);
+                }
                 break;
         }
     }

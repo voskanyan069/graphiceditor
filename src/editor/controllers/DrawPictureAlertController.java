@@ -1,9 +1,11 @@
 package editor.controllers;
 
 import editor.canvas.PictureDrawing;
+import editor.config.BrushWidth;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -39,16 +41,27 @@ public class DrawPictureAlertController {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
+        CheckBox filledCB = new CheckBox();
+        gridPane.add(new Label("Fill"), 0, i);
+        gridPane.add(filledCB, 1, i++);
+        gridPane.add(new Label("Stroke width"), 0, i);
+        TextField strokeWidth = new TextField();
+        strokeWidth.setPromptText("Stroke width");
+        gridPane.add(strokeWidth, 1, i++);
         Button submit = new Button("Draw");
         gridPane.add(submit, 0, i);
         submit.setOnAction(actionEvent -> {
             for (TextField textField : textFieldsList) {
                 valuesList.add(textField.getText().trim());
             }
+            try {
+                BrushWidth.strokeWidth = Integer.parseInt(strokeWidth.getText());
+            } catch (NumberFormatException e) {
+                BrushWidth.strokeWidth = 1;
+            }
             (((Node) actionEvent.getSource()).getScene().getWindow()).hide();
             PictureDrawing pictureDrawing = new PictureDrawing();
-            pictureDrawing.drawSelectedPicture(valuesList);
+            pictureDrawing.drawSelectedPicture(valuesList, filledCB.isSelected());
         });
     }
 
