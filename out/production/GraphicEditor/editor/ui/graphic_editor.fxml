@@ -17,7 +17,7 @@
     <BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="1200.0">
         <center>
             <SplitPane fx:id="splitPane" dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                <AnchorPane fx:id="splitLeftPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane fx:id="splitLeftPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="toolbox_container">
                     <GridPane fx:id="toolsPane" alignment="CENTER" hgap="10.0" prefHeight="300.0" prefWidth="360.0" vgap="10.0">
                         <columnConstraints>
                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -36,20 +36,20 @@
                         <padding>
                             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                         </padding>
-                        <ColorPicker fx:id="brushColorPicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" GridPane.rowIndex="1" />
-                        <TextField fx:id="brushWidthInput" promptText="Line width (1 default)" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                        <Button fx:id="saveBrushWidthBtn" mnemonicParsing="false" styleClass="toolbox_buttons" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="brushBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons_pressable" />
+                        <Button fx:id="eraserBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons_pressable" GridPane.columnIndex="1" />
                         <Button fx:id="canvasClearBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="2" />
                         <Button fx:id="canvasFillBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="3" />
-                        <ColorPicker fx:id="canvasColorPicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="eraserBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="1" />
-                        <ChoiceBox fx:id="pictureSelect" prefWidth="150.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                        <Button fx:id="drawPictureBtn" mnemonicParsing="false" styleClass="toolbox_buttons" text="Draw" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Button fx:id="brushBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" />
-                        <Button fx:id="openImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.rowIndex="4" />
-                        <Button fx:id="exportImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ColorPicker fx:id="brushColorPicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" styleClass="toolbox_color_picker" GridPane.rowIndex="1" />
+                        <ColorPicker fx:id="canvasColorPicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" styleClass="toolbox_color_picker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button fx:id="addTextBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Button fx:id="cropImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="brushWidthInput" promptText="Line width (1 default)" styleClass="toolbox_inputs" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <Button fx:id="saveBrushWidthBtn" mnemonicParsing="false" styleClass="toolbox_buttons" text="Save" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="pictureSelect" prefWidth="200.0" styleClass="toolbox_selects" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <Button fx:id="drawPictureBtn" mnemonicParsing="false" styleClass="toolbox_buttons" text="Draw" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button fx:id="openImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.rowIndex="4" />
+                        <Button fx:id="exportImageBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="toolbox_buttons" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     </GridPane>
                 </AnchorPane>
                 <AnchorPane fx:id="splitRightPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">

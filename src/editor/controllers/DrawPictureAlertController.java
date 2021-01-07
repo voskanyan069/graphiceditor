@@ -32,9 +32,12 @@ public class DrawPictureAlertController {
         try {
             while (i < labels.length) {
                 TextField textField = new TextField();
+                Label label = new Label(labels[i]);
                 textField.setPromptText(labels[i]);
+                textField.getStyleClass().add("text_inputs");
+                label.getStyleClass().add("draw_labels");
                 textFieldsList.add(textField);
-                gridPane.add(new Label(labels[i]), 0, i);
+                gridPane.add(label, 0, i);
                 gridPane.add(textFieldsList.get(i), 1, i);
                 i++;
             }
@@ -42,13 +45,19 @@ public class DrawPictureAlertController {
             System.out.println(e.getMessage());
         }
         CheckBox filledCB = new CheckBox();
-        gridPane.add(new Label("Fill"), 0, i);
+        Label cbLabel = new Label("Fill");
+        cbLabel.getStyleClass().add("draw_labels");
+        gridPane.add(cbLabel, 0, i);
         gridPane.add(filledCB, 1, i++);
-        gridPane.add(new Label("Stroke width"), 0, i);
+        Label swLabel = new Label("Stroke width");
+        swLabel.getStyleClass().add("draw_labels");
+        gridPane.add(swLabel, 0, i);
         TextField strokeWidth = new TextField();
         strokeWidth.setPromptText("Stroke width");
+        strokeWidth.getStyleClass().add("text_inputs");
         gridPane.add(strokeWidth, 1, i++);
         Button submit = new Button("Draw");
+        submit.getStyleClass().add("buttons");
         gridPane.add(submit, 0, i);
         submit.setOnAction(actionEvent -> {
             for (TextField textField : textFieldsList) {

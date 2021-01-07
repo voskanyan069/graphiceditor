@@ -1,3 +1,130 @@
-.toolbox_buttons {
+* {
+    primary_color: #474747;
+    secondary_color: #585858;
+    hover_color: #7e7e7e;
+}
 
+.main_container {
+    -fx-background-color: primary_color;
+}
+
+.toolbox_container {
+    -fx-background-color: primary_color;
+}
+
+.toolbox_buttons {
+    -fx-background-color: primary_color;
+}
+
+.toolbox_buttons_pressable {
+    -fx-background-color: primary_color;
+}
+
+.toolbox_buttons:hover {
+    -fx-background-color: hover_color;
+}
+
+.toolbox_buttons_pressable:focused {
+    -fx-background-color: hover_color;
+}
+
+.toolbox_buttons_pressable:hover {
+    -fx-background-color: secondary_color;
+}
+
+.toolbox_color_picker {
+    -fx-background-color: primary_color;
+    -fx-mark-color: white;
+}
+
+.toolbox_color_picker:hover {
+    -fx-background-color: hover_color;
+}
+
+.toolbox_inputs {
+    -fx-background-color: primary_color;
+    -fx-text-fill: white;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: white;
+}
+
+.toolbox_inputs:focused {
+    -fx-border-width: 1 1 1 1;
+}
+
+.toolbox_selects {
+    -fx-background-color: primary_color;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: white;
+    -fx-mark-color: white;
+}
+
+.toolbox_selects .label {
+    -fx-text-fill: white;
+}
+
+.toolbox_selects .context-menu {
+    -fx-background-color: primary_color;
+}
+
+.toolbox_selects .menu-item:focused {
+    -fx-background-color: orange;
+}
+
+.toolbox_selects .menu-item > .label {
+    -fx-text-fill: white;
+}
+
+.toolbox_selects .menu-item:focused > .label {
+    -fx-text-fill: black;
+}
+
+.add_text_area {
+    -fx-text-fill: white;
+}
+
+.add_text_area .content {
+    -fx-background-color: hover_color;
+}
+
+.text_inputs {
+    -fx-text-fill: white;
+    -fx-background-color: hover_color;
+}
+
+.buttons {
+    -fx-background-color: orange;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.buttons:hover {
+    -fx-background-color: #d79016;
+}
+
+.add_text_color_picker {
+    -fx-mark-color: white;
+    -fx-background-color: hover_color;
+}
+
+.add_text_color_picker .label {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: orange;
+}
+
+.draw_labels {
+    -fx-text-fill: white;
 }

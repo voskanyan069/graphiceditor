@@ -7,5 +7,5 @@ public class Colors {
     public static Color eraserColor = Color.WHITE;
     public static Color canvasColor = Color.WHITE;
     public static Color textColor = Color.BLACK;
-    public static final Color iconColor = Color.DARKGRAY;
+    public static final Color iconColor = Color.WHITE;
 }
