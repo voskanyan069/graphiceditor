@@ -4,10 +4,7 @@ import editor.canvas.AddText;
 import editor.config.Colors;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ColorPicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -31,6 +28,9 @@ public class AddTextAlertController {
 
     @FXML
     private ColorPicker textColorPicker;
+
+    @FXML
+    private CheckBox fillTextCB;
 
     @FXML
     private Button addTextToCanvasBtn;
@@ -58,7 +58,7 @@ public class AddTextAlertController {
                 fontSize = 13;
             }
 
-            AddText.addText(addTextArea.getText(), x, y, "file:" + fontFamilyPath, fontSize);
+            AddText.addText(addTextArea.getText(), x, y, "file:" + fontFamilyPath, fontSize, fillTextCB.isSelected());
             ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         });
     }

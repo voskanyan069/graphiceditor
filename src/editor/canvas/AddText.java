@@ -22,9 +22,17 @@ public class AddText {
                 "Add Text", new int[]{600, 400}, new int[]{600, 400}, false));
     }
 
-    public static void addText(String text, double x, double y, String fontFamilyPath, int fontSize) {
-        graphicsContext.setFill(Colors.textColor);
-        graphicsContext.fillText(text, x, y);
+    public static void addText(String text, double x, double y, String fontFamilyPath, int fontSize, boolean filled) {
         graphicsContext.setFont(Font.loadFont(fontFamilyPath, fontSize));
+
+        if (filled) {
+            graphicsContext.setFill(Colors.textColor);
+            graphicsContext.fillText(text, x, y);
+            graphicsContext.setFill(Colors.brushColor);
+        } else {
+            graphicsContext.setStroke(Colors.textColor);
+            graphicsContext.strokeText(text, x, y);
+            graphicsContext.setStroke(Colors.brushColor);
+        }
     }
 }
