@@ -48,5 +48,6 @@ public class ContainersResizeListener {
         splitLeftPane.setMinWidth(200);
         splitLeftPane.setMaxWidth(400);
         splitRightPane.setMinWidth(200);
+        splitRightPane.setStyle("-fx-background-color: #fff");
     }
 }
