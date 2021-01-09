@@ -18,7 +18,7 @@ public class AddText {
     }
 
     public void openDialog() {
-        addTextBtn.setOnAction(actionEvent -> ChangeStage.changeStage(GraphicEditorController.class, "../ui/add_text_alert.fxml",
+        addTextBtn.setOnAction(actionEvent -> ChangeStage.changeStage(GraphicEditorController.class, "/editor/ui/add_text_alert.fxml",
                 "Add Text", new int[]{600, 400}, new int[]{600, 400}, false));
     }
 
