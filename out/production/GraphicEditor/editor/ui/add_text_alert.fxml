@@ -33,7 +33,7 @@
         <TextField promptText="X position" styleClass="text_inputs" GridPane.rowIndex="2" fx:id="xPositionInput" />
         <TextField fx:id="yPositionInput" promptText="Y position" styleClass="text_inputs" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <ColorPicker fx:id="textColorPicker" styleClass="add_text_color_picker" GridPane.rowIndex="3" />
-      <CheckBox fx:id="fillTextCB" mnemonicParsing="false" selected="true" styleClass="add_text_check_box" text="Fill" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <CheckBox fx:id="fillTextCB" mnemonicParsing="false" selected="true" text="Fill" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         <Button fx:id="addTextToCanvasBtn" mnemonicParsing="false" styleClass="buttons" text="Add text" GridPane.rowIndex="4" />
     </GridPane>
 </AnchorPane>
